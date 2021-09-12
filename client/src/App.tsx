@@ -1,11 +1,12 @@
+import { FC } from "react";
 import Home from "./components/layouts/Home/Home";
 
-function App() {
+const App: FC = () => {
   return (
     <div>
       <Home />
     </div>
   );
-}
+};
 
 export default App;
