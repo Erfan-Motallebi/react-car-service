@@ -42,10 +42,11 @@ const navMobileStyles = css`
 `;
 
 const MenuWrapper = styled(Menu)<{ styles: any }>`
+  width: 250px !important;
+  font-size: 16px !important;
   ${tw`
         fixed
         top-0
-        flex-direction[column]
       `}
 `;
 
