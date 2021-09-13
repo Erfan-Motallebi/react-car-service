@@ -27,19 +27,20 @@ export const styles = {
   bmMenu: {
     background: "#373a47",
     padding: "2.5em 1.5em 0",
+    position: "relative",
     fontSize: "1.15em",
   },
   bmMorphShape: {
     fill: "#373a47",
   },
   bmItemList: {
-    color: "#b8b7ad",
+    color: "#ffffff",
     padding: "0.8em",
   },
   bmItem: {
     display: "inline-block",
   },
   bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)",
+    background: "none",
   },
 };

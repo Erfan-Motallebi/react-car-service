@@ -41,21 +41,22 @@ const navMobileStyles = css`
   `}
 `;
 
-const MenuWrapper = styled(Menu)<{ styles: any }>`
-  width: 250px !important;
-  font-size: 16px !important;
+const MenuWrapper = styled(Menu) <{ styles: any }>`
+
   ${tw`
-        fixed
-        top-0
+  font-size[16px !important]
+  width[250px !important]
+   fixed
+   top-0
       `}
 `;
 
-const NavbWrapper = styled.div<IMobileProp>`
+const NavWrapper = styled.div<IMobileProp>`
   min-height: 50px;
   ${tw`
       flex
       justify-between
-      max-w-screen-2xl
+      max-w-screen-3xl
   `}
   ${(props) => props.desktop && navDekstopStyle}
   ${(props) => props.mobile && navMobileStyles}
@@ -65,18 +66,18 @@ const Navbar: FC = () => {
   return (
     <Fragment>
       <Desktop>
-        <NavbWrapper desktop="desktop">
+        <NavWrapper desktop="desktop">
           <Logo />
           <NavLinks />
-        </NavbWrapper>
+        </NavWrapper>
       </Desktop>
       <Mobile>
-        <NavbWrapper mobile="mobile">
+        <NavWrapper mobile="mobile">
           <Logo mobile="mobile" />
           <MenuWrapper styles={styles} right>
             <NavLinks />
           </MenuWrapper>
-        </NavbWrapper>
+        </NavWrapper>
       </Mobile>
     </Fragment>
   );

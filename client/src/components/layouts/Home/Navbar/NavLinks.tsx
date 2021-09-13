@@ -6,7 +6,9 @@ const NavLinkWrapper = styled.div``;
 
 const UlWrapper = styled.ul`
   ${tw`
-        lg:flex
+    relative
+    z-50
+    lg:flex
     `}
   li {
     ${tw`
