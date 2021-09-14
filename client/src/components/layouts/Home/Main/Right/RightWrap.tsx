@@ -33,28 +33,7 @@ const BlobWrapper = styled.div<{ className?: "blob-desktop" | undefined }>`
     fill: #023f92;
     width: 50vmax;
     z-index: -100;
-    animation: move 10s ease-in-out infinite;
     transform-origin: 50% 50%;
-  }
-  @keyframes move {
-    0% {
-      transform: scale(1) translate(10px, 20px);
-    }
-    38% {
-      transform: scale(0.5, 1) translate(-0, 0) rotate(160deg);
-    }
-    40% {
-      transform: scale(0.5, 1) translate(-0, 0) rotate(160deg);
-    }
-    78% {
-      transform: scale(1.2) translate(0vw, -10vh) rotate(-20deg);
-    }
-    80% {
-      transform: scale(1.2) translate(0vw, -10vh) rotate(-20deg);
-    }
-    100% {
-      transform: scale(1) translate(10px, 20px);
-    }
   }
 `;
 
