@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { Fragment } from "react";
+import CalendarFC from "./Calender/Calendar";
 import Main from "./Main/Main";
 
 import Navbar from "./Navbar/Navbar";
@@ -9,6 +10,7 @@ const Home: FunctionComponent = () => {
     <Fragment>
       <Navbar />
       <Main />
+      <CalendarFC />
     </Fragment>
   );
 };

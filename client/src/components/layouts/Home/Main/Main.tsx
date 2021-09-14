@@ -9,7 +9,7 @@ const MainWrapper = styled.div`
   ${tw`
      grid
      grid-cols-2
-     mt-28
+     mt-20
      max-w-screen-3xl
      mx-auto
      p-5

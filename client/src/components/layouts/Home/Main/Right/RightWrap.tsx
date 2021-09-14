@@ -8,8 +8,9 @@ import blobImg from "../../../../../assets/images/blob.svg";
 const RightWrapper = styled.div`
   ${tw`
     relative
-    max-lg:mt-64
     mr-12
+    max-lg:mt-80
+    max-md:(mt-48)
   `}
 `;
 
@@ -42,7 +43,7 @@ const CarImage = styled.div`
     position: absolute;
     ${tw`
     z-50
-    lg:-mt-8
+    lg:(-mt-8 ml-14)
     max-lg:(-my-36)
     `}
   }
