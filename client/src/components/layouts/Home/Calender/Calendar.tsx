@@ -3,10 +3,17 @@ import { FC, useState } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import Calendar from "react-calendar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalendar,
+  faArrowCircleUp,
+  faArrowCircleDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 // FILES:
 import { BookBtn } from "../Main/left/Buttons/Buttons";
 import "react-calendar/dist/Calendar.css";
+import MediaQuery from "react-responsive";
 
 const DateWrapper = styled.div`
   ${tw`
@@ -42,18 +49,22 @@ const DateBox = styled.div`
 
 const PickDateBox = styled.button`
   ${tw`
+  transition-colors
+  hover:(text-pink-600)
 `}
 `;
 const ReturndateBox = styled.button`
   ${tw`
-
+  transition-colors
+  hover:(text-pink-600)
 `}
 `;
 
 const DateSubmitBtn = styled(BookBtn)`
   ${tw`
-        p-2
-        border-2
+      p-2
+      border-2
+      mobile:(hover:(border-radius[0]))
 `}
 `;
 
@@ -62,7 +73,8 @@ const TextBox = styled.div`
     text-center
     font-extrabold
     text-6xl
-    max-lg:(text-4xl -mt-10)
+    // max-lg:(text-4xl -mt-10)
+    mobile:(text-3xl -mt-10 mx-auto)
 `}
 `;
 
@@ -75,13 +87,26 @@ const CalendarWrapper = styled.div<{ date: string }>`
   `}
 `;
 
+const FaCalendar = styled.i`
+  ${tw`
+    text-red-500
+    pr-2
+  `}
+`;
+
+const FaArrowCircle = styled.i`
+  ${tw`
+    text-red-500
+    pl-2
+  `}
+`;
+
 const CalendarFC: FC = () => {
   const [dateOfPick, setDateOfPick] = useState(new Date());
   const [dateOfReturn, setDateOfReturn] = useState(new Date());
   const [pickState, setPickState] = useState(false);
   const [returnState, setReturnState] = useState(false);
   const [selectDate, setSelectDate] = useState("pick");
-  console.log({ dateOfReturn, dateOfPick });
 
   return (
     <DateWrapper>
@@ -91,12 +116,53 @@ const CalendarFC: FC = () => {
             setPickState(!pickState);
           }}
         >
+          <MediaQuery minWidth="987px">
+            <FaCalendar>
+              <FontAwesomeIcon icon={faCalendar} size="lg" />
+            </FaCalendar>
+          </MediaQuery>
+          <MediaQuery maxWidth="987px">
+            <FaCalendar>
+              <FontAwesomeIcon icon={faCalendar} size="sm" />
+            </FaCalendar>
+          </MediaQuery>
           Pick your date
+          <MediaQuery minWidth="975px">
+            <FaArrowCircle>
+              <FontAwesomeIcon
+                icon={pickState ? faArrowCircleDown : faArrowCircleUp}
+                size="1x"
+              />
+            </FaArrowCircle>
+          </MediaQuery>
         </PickDateBox>
         <ReturndateBox onClick={() => setReturnState(!returnState)}>
+          <MediaQuery minWidth="987px">
+            <FaCalendar>
+              <FontAwesomeIcon icon={faCalendar} size="lg" />
+            </FaCalendar>
+          </MediaQuery>
+          <MediaQuery maxWidth="987px">
+            <FaCalendar>
+              <FontAwesomeIcon icon={faCalendar} size="sm" />
+            </FaCalendar>
+          </MediaQuery>
           Return date
+          <MediaQuery minWidth="975px">
+            <FaArrowCircle>
+              <FontAwesomeIcon
+                icon={returnState ? faArrowCircleDown : faArrowCircleUp}
+                size="1x"
+              />
+            </FaArrowCircle>
+          </MediaQuery>
         </ReturndateBox>
-        <DateSubmitBtn>Book your car</DateSubmitBtn>
+        <MediaQuery minWidth="975px">
+          <DateSubmitBtn>Book your car</DateSubmitBtn>
+        </MediaQuery>
+        <MediaQuery maxWidth="975px">
+          <DateSubmitBtn style={{ borderRadius: "30%" }}>Book</DateSubmitBtn>
+        </MediaQuery>
       </DateBox>
       {pickState && (
         <CalendarWrapper date={selectDate}>
