@@ -17,7 +17,6 @@ import MediaQuery from "react-responsive";
 
 const DateWrapper = styled.div`
   ${tw`
-        // bg-blue-600
         max-w-screen-3xl
         mx-auto
         p-2
@@ -42,6 +41,7 @@ const DateBox = styled.div`
         -mt-5
         pl-3
         ml-7
+        mx-auto
         box-shadow[-1px -1px 10px 2px #7e683e, 1px 1px 10px 2px #535151]
         max-lg:(mx-auto width[400px] mt-10)
 `}
@@ -73,17 +73,19 @@ const TextBox = styled.div`
     text-center
     font-extrabold
     text-6xl
-    // max-lg:(text-4xl -mt-10)
-    mobile:(text-3xl -mt-10 mx-auto)
+    mt-16
+    max-lg:(text-4xl mt-28)
 `}
 `;
 
 const CalendarWrapper = styled.div<{ date: string }>`
   ${tw`
-      width[500px]
       absolute
       p-8
-      mt-4
+      mt-8
+      margin-left[28%]
+      max-lg:(mt-24)
+      mobile:(-ml-0)
   `}
 `;
 
