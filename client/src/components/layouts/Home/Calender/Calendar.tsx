@@ -73,7 +73,7 @@ const TextBox = styled.div`
     text-center
     font-extrabold
     text-6xl
-    mt-16
+    mt-12
     max-lg:(text-4xl mt-28)
 `}
 `;
