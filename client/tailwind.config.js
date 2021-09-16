@@ -5,11 +5,7 @@ module.exports = {
   theme: {
     screens: {
       // User-defined Screen
-<<<<<<< HEAD
       mobile: { max: "580px" },
-=======
-      mobile: { max: "768px" },
->>>>>>> home---bookmark
       "max-lg": { max: "975px" },
       tablet: { min: "977px", max: "1670px" },
       // ---end ----
