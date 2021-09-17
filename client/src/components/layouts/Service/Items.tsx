@@ -10,6 +10,7 @@ import {
 
 const ItemsWrapper = styled.div`
   ${tw`
+    cursor-pointer
     lg:(grid grid-cols-3 place-content-center mr-48)
     max-lg:( grid grid-cols-1 mx-auto -ml-28)
   `}
@@ -21,7 +22,8 @@ const StepWrapper = styled.div`
     flex
     flex-col
     items-center
-    m-32
+    m-20
+    
     `}
 `;
 
