@@ -10,14 +10,14 @@ const ButtonsWrapper = styled.div`
 
 export const BookBtn = styled.button`
   ${tw`
+        transition[all 2s ease-in-out]
         p-4 px-8 border-2 m-2 capitalize border-radius[.2rem] border-pink-500 bg-pink-500 text-white
-        hover:(bg-pink-50 text-pink-700 cursor-pointer)
-        max-lg:(p-2 px-5 hover:(cursor-pointer))
+        hover:( bg-pink-50 text-pink-700 cursor-pointer)
+        max-lg:(p-2 px-5)
     `}
 `;
 const SellBtn = styled(BookBtn)`
   ${tw`
-        transition-colors
         bg-pink-50
         px-6
         hover:(bg-pink-600 text-white cursor-pointer)

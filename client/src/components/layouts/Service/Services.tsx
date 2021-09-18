@@ -16,6 +16,7 @@ const Services: FC = () => {
   return (
     <ServiceWrapper>
       <Items />
+      <div style={{ height: "100px" }}></div>
       <Description />
     </ServiceWrapper>
   );
