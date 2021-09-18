@@ -107,6 +107,7 @@ const CalendarFC: FC = () => {
   const [dateOfReturn, setDateOfReturn] = useState(new Date());
   const [pickState, setPickState] = useState(false);
   const [returnState, setReturnState] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectDate, setSelectDate] = useState("pick");
 
   return (
