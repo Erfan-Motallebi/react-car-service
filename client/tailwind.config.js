@@ -6,7 +6,7 @@ module.exports = {
     screens: {
       // User-defined Screen
       mobile: { max: "580px" },
-      "max-lg": { max: "975px" },
+      "max-lg": { max: "979px" },
       tablet: { min: "977px", max: "1670px" },
       // ---end ----
       sm: "640px",
@@ -14,7 +14,7 @@ module.exports = {
       "max-md": { max: "768px" },
       md: "768px",
       // => @media (min-width: 768px) { ... }
-      lg: "976px",
+      lg: "980px",
       // => @media (min-width: 1024px) { ... }
 
       xl: "1100pxpx",

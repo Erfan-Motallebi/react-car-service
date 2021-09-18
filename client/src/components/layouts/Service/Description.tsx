@@ -11,7 +11,6 @@ const DescWrapper = styled.div`
         place-items-center       
         shadow-2xl
         mt-14
-    
     `}
 `;
 
