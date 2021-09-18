@@ -5,15 +5,12 @@ import LamboImageService from "../../../assets/images/lambo-service-pic.jpg";
 
 const DescWrapper = styled.div`
   ${tw`
-        width[100%]
+        max-lg:(grid-cols-1)
         grid
         grid-cols-2
-        place-items-center
-        text-3xl
-        // border[1px solid darkgray]
+        place-items-center       
         shadow-2xl
         mt-14
-        max-lg:(grid-cols-1)
     `}
 `;
 
@@ -28,15 +25,17 @@ const DescImage = styled.div`
 const DescText = styled.div`
   h1 {
     ${tw`
-        text-6xl
+        2xl:(text-6xl)
+        lg:(text-5xl)
         font-extrabold
-        max-lg:(text-4xl text-center p-5)
+        max-lg:(text-3xl text-center p-5)
       `}
   }
   p {
     ${tw`
       pt-8
       text-base
+      lg:(p-4)
       max-lg:(p-10 text-justify)
 
     `}
