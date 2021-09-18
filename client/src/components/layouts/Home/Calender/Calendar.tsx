@@ -64,7 +64,6 @@ const DateSubmitBtn = styled(BookBtn)`
   ${tw`
       p-2
       border-2
-      mobile:(hover:(border-radius[0]))
 `}
 `;
 
@@ -73,7 +72,7 @@ const TextBox = styled.div`
     text-center
     font-extrabold
     text-6xl
-    mt-12
+    mt-8
     max-lg:(text-4xl mt-28)
 `}
 `;
@@ -163,7 +162,7 @@ const CalendarFC: FC = () => {
           <DateSubmitBtn>Book your car</DateSubmitBtn>
         </MediaQuery>
         <MediaQuery maxWidth="975px">
-          <DateSubmitBtn style={{ borderRadius: "30%" }}>Book</DateSubmitBtn>
+          <DateSubmitBtn>Book</DateSubmitBtn>
         </MediaQuery>
       </DateBox>
       {pickState && (
