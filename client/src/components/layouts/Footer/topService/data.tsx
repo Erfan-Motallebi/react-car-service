@@ -17,7 +17,7 @@ export const data = [
   },
   {
     id: 3,
-    image: "./images/slider/lambo-2.jpg",
+    image: "./images/slider/lambo-2.png",
     title: "Lamborghini 3",
     priceOfDay: 126,
     priceOfMonth: 6870,
@@ -25,7 +25,7 @@ export const data = [
   },
   {
     id: 4,
-    image: "./images/slider/lambo-3.jpg",
+    image: "./images/slider/lambo-3.png",
     title: "Lamborghini 4",
     priceOfDay: 132,
     priceOfMonth: 7800,

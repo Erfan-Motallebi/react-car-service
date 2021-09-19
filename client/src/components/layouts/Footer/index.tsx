@@ -6,7 +6,7 @@ const IndexWrapper = styled.div`
   ${tw`
         w-full
         height[220px]
-        bg-gray-800
+        background[#2c2929]
       `}
 `;
 
