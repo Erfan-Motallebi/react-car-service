@@ -4,8 +4,10 @@ import tw from "twin.macro";
 
 const IndexWrapper = styled.div`
   ${tw`
-        height[200px]
-        `}
+        w-full
+        height[220px]
+        bg-gray-800
+      `}
 `;
 
 const Index: FC = () => {

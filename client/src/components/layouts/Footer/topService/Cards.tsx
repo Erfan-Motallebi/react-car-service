@@ -80,6 +80,7 @@ const StyledButton = styled(BookBtn)`
         hover:(border[2px red solid])
         box-shadow[1px 1xp 30xp 5px lightcoral -1px -1px 20px 10px lightblue]
         max-lg:(width[100px] text-base)
+
    `}
 `;
 

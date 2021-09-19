@@ -7,6 +7,7 @@ module.exports = {
       // User-defined Screen
       mobile: { max: "580px" },
       "max-lg": { max: "979px" },
+      "max-slider": { max: "782px" },
       tablet: { min: "977px", max: "1670px" },
       // ---end ----
       sm: "640px",
