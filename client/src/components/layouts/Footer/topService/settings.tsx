@@ -2,7 +2,7 @@ export const settings = {
   xxxl: {
     className: "center",
     centerMode: true,
-    centerPadding: "40px",
+    centerPadding: "20px",
     autoplay: true,
     autoplaySpeed: 4000,
     pauseOnHover: true,
@@ -60,6 +60,18 @@ export const settings = {
     rtl: true,
   },
   sm: {
+    className: "center",
+    centerMode: true,
+    centerPadding: "30",
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    slidesToShow: 1,
+    speed: 500,
+    dots: true,
+    rtl: true,
+  },
+  xm: {
     className: "center",
     centerMode: true,
     centerPadding: "30",

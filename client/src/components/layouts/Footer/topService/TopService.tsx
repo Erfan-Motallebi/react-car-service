@@ -10,6 +10,7 @@ import MediaQuery from "react-responsive";
 import { settings } from "./settings";
 
 export interface IData {
+  id: number;
   image: string;
   title: string;
   priceOfDay: number;
@@ -91,11 +92,11 @@ const TopService: FC = () => {
               })}
           </Slider>
         </MediaQuery>
-        <MediaQuery maxWidth="782px">
+        <MediaQuery maxWidth="783px">
           <Slider {...settings.sm}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
-                return <Cards data={card} />;
+                return <Cards data={card} key={card.id} />;
               })}
           </Slider>
         </MediaQuery>

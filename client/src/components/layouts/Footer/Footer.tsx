@@ -6,7 +6,6 @@ import TopService from "./topService/TopService";
 
 const FooterWrapper = styled.div`
   ${tw`
-    max-w-screen-3xl
     mx-auto
     pt-32
     `}
