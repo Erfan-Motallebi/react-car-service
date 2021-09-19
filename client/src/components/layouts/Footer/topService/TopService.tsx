@@ -59,7 +59,7 @@ const TopService: FC = () => {
               })}
           </Slider>
         </MediaQuery>
-        <MediaQuery minWidth="1256px" maxWidth="1549px">
+        <MediaQuery minWidth="1269px" maxWidth="1549px">
           <Slider {...settings.xxl}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
@@ -67,7 +67,7 @@ const TopService: FC = () => {
               })}
           </Slider>
         </MediaQuery>
-        <MediaQuery minWidth="980px" maxWidth="1255px">
+        <MediaQuery minWidth="1092px" maxWidth="1268px">
           <Slider {...settings.xl}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
@@ -75,7 +75,7 @@ const TopService: FC = () => {
               })}
           </Slider>
         </MediaQuery>
-        <MediaQuery minWidth="852px" maxWidth="980px">
+        <MediaQuery minWidth="857px" maxWidth="1091px">
           <Slider {...settings.lg}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
@@ -83,7 +83,7 @@ const TopService: FC = () => {
               })}
           </Slider>
         </MediaQuery>
-        <MediaQuery minWidth="685px" maxWidth="852px">
+        <MediaQuery minWidth="783px" maxWidth="856px">
           <Slider {...settings.md}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
@@ -91,7 +91,7 @@ const TopService: FC = () => {
               })}
           </Slider>
         </MediaQuery>
-        <MediaQuery minWidth="500px" maxWidth="685px">
+        <MediaQuery maxWidth="782px">
           <Slider {...settings.sm}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {

@@ -38,7 +38,9 @@ const CardsWrapper = styled.div`
   h2 {
     ${tw`
         text-center
-        font-bold
+        letter-spacing[1px]
+        font-extrabold
+        text-3xl
         max-lg:(text-base font-bold)
     `}
   }
@@ -46,8 +48,23 @@ const CardsWrapper = styled.div`
 
 const PriceWrapper = styled.div`
   ${tw`
+        flex
+        justify-between
+        lg:(font-size[20px])
         max-lg:(text-base)
-        `}
+     `}
+  & > h5:first-child {
+    ${tw`
+        text-red-700
+        font-bold
+      `}
+  }
+
+  & > h5:nth-child(2) {
+    ${tw`
+        font-bold
+      `}
+  }
 `;
 
 const StyledButton = styled(BookBtn)`
@@ -56,8 +73,30 @@ const StyledButton = styled(BookBtn)`
         width[150px]
         block
         mx-auto
+        mt-5
+        bg-red-800
+        border[2px red solid]
+        transition[all .4s ease-in-out]
+        hover:(border[2px red solid])
+        box-shadow[1px 1xp 30xp 5px lightcoral -1px -1px 20px 10px lightblue]
         max-lg:(width[100px] text-base)
    `}
+`;
+
+const StyledGear = styled.div`
+  ${tw`
+          flex
+          justify-between
+    `}
+  & > h4 {
+    ${tw`
+      border[none]
+      border-radius[5px]
+      font-bold
+      px-5
+      background[pink]
+     `}
+  }
 `;
 
 const Cards: FC<IProps> = ({
@@ -68,10 +107,13 @@ const Cards: FC<IProps> = ({
       <img src={image} alt={title} />
       <h2>{title}</h2>
       <PriceWrapper>
-        <h4>{priceOfDay}</h4>
-        <h4>{priceOfMonth}</h4>
+        <h5>${priceOfDay}/Day</h5>
+        <h5>${priceOfMonth}/Month</h5>
       </PriceWrapper>
-      <h4>{gear}</h4>
+      <StyledGear>
+        <h4>Gear</h4>
+        <h4>{gear}</h4>
+      </StyledGear>
       <StyledButton>Buy Now</StyledButton>
     </CardsWrapper>
   );
