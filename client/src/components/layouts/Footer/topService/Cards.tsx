@@ -20,7 +20,6 @@ const CardsWrapper = styled.div`
     justify-between
     transition[all .4s ease-in-out]
     hover:(transform[scale(1.05)])
-    
     border[1px solid rgba(230,230,230,08)]
     border-radius[15px]
     box-shadow[0 2px 2px rgba(0, 0, 0, 0.2)]
