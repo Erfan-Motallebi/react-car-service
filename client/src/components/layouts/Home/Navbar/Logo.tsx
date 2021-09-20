@@ -1,5 +1,4 @@
 import LogoLamboImg from "../../../../assets/images/lambo-logo.png";
-
 import { FunctionComponent } from "react";
 import styled, { css } from "styled-components";
 import tw from "twin.macro";
@@ -27,7 +26,7 @@ const Image = styled.div<{ mobile?: string }>`
   ${(props) => (props.mobile ? imageMobileStyle : null)}
 `;
 
-const LogoMotto = styled.div`
+export const LogoMotto = styled.div`
   ${tw`
     lg:( transition duration-500 hover:(text-link letter-spacing[1px]) font-semibold text-3xl )
     `}
