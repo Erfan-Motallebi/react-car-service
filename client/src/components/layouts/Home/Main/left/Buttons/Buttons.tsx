@@ -10,7 +10,7 @@ const ButtonsWrapper = styled.div`
 
 export const BookBtn = styled.button`
   ${tw`
-        transition[all 2s ease-in-out]
+        transition[all .6s ease-in-out]
         p-4 px-8 border-2 m-2 capitalize border-radius[.2rem] border-pink-500 bg-pink-500 text-white
         hover:( bg-pink-50 text-pink-700 cursor-pointer)
         max-lg:(p-2 px-5)
