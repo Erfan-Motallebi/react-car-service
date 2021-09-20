@@ -21,6 +21,9 @@ const StepWrapper = styled.div`
     flex-col
     items-center
     mt-16
+    transition[.3s all ease-in]
+    
+    hover:(transform[scale(1.1)])
     max-lg:( pt-10 pl-28 mx-auto)
     `}
 `;
