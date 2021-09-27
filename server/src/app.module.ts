@@ -1,11 +1,15 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ConfigModule } from '@nestjs/config';
+import { GraphQLModule } from '@nestjs/graphql';
+import { join } from 'path';
+import { CarModule } from './Car/car.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.MongoDB_URL),
-  ],
+    GraphQLModule.forRoot({
+      autoSchemaFile: join(process.cwd(), 'src/GraphQLSchema.gql'),
+    }),
+    MongooseModule.forRoot('mongodb://localhost:27017/car-service-nestjs'),
+  CarModule],
 })
 export class AppModule {}
