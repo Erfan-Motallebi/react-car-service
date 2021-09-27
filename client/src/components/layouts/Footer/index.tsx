@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import imgCarLogo from "../../../assets/images/lambo-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faVoicemail } from "@fortawesome/free-solid-svg-icons";
 import Link from "./Link";
 
 const IndexWrapper = styled.div`
@@ -147,7 +147,7 @@ const Index: FC = () => {
           <h1>Mail Now</h1>
           <Call>
             <i className="footer-icon">
-              <FontAwesomeIcon icon={faPhone} />
+              <FontAwesomeIcon icon={faVoicemail} />
             </i>
             <span>carSports@gmail.com</span>
           </Call>
