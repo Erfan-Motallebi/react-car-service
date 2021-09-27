@@ -9,11 +9,16 @@ import {
   faArrowCircleUp,
   faArrowCircleDown,
 } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import { bindActionCreators } from "redux";
+import { useDispatch, useSelector } from "react-redux";
+import MediaQuery from "react-responsive";
 
 // FILES:
 import { BookBtn } from "../Main/left/Buttons/Buttons";
 import "react-calendar/dist/Calendar.css";
-import MediaQuery from "react-responsive";
+import { RootState } from "../../../../app/store";
+import { CarActionsCreators } from "../../../../app/Redux";
 
 const DateWrapper = styled.div`
   ${tw`
@@ -77,7 +82,7 @@ const TextBox = styled.div`
 `}
 `;
 
-const CalendarWrapper = styled.div<{ date: string }>`
+const CalendarWrapper = styled.div`
   ${tw`
       absolute
       p-8
@@ -103,12 +108,37 @@ const FaArrowCircle = styled.i`
 `;
 
 const CalendarFC: FC = () => {
-  const [dateOfPick, setDateOfPick] = useState(new Date());
-  const [dateOfReturn, setDateOfReturn] = useState(new Date());
+  const states = useSelector<RootState, RootState>((state) => state);
+  const dispatch = useDispatch();
+  const [pickDate, setPickDate] = useState<Date>(new Date());
+  const [returnDate, setReturnDate] = useState(new Date() as Date);
   const [pickState, setPickState] = useState(false);
   const [returnState, setReturnState] = useState(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [selectDate, setSelectDate] = useState("pick");
+
+  const { dateCreator } = bindActionCreators(CarActionsCreators, dispatch);
+
+  const bookCarHandler = async () => {
+    await axios({
+      url: "http://localhost:5252/date",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: {
+        pick: states.date.pickDate,
+        return: states.date.returnDate,
+      },
+    });
+  };
+
+  /**
+   * @Test
+   */
+
+  console.log({
+    pickDate,
+    returnDate,
+  });
 
   return (
     <DateWrapper>
@@ -160,27 +190,33 @@ const CalendarFC: FC = () => {
           </MediaQuery>
         </ReturndateBox>
         <MediaQuery minWidth="975px">
-          <DateSubmitBtn>Book your car</DateSubmitBtn>
+          <DateSubmitBtn onClick={bookCarHandler}>Book your car</DateSubmitBtn>
         </MediaQuery>
         <MediaQuery maxWidth="975px">
-          <DateSubmitBtn>Book</DateSubmitBtn>
+          <DateSubmitBtn onClick={bookCarHandler}>Book</DateSubmitBtn>
         </MediaQuery>
       </DateBox>
       {pickState && (
-        <CalendarWrapper date={selectDate}>
+        <CalendarWrapper>
           <Calendar
-            value={dateOfPick}
-            onChange={setDateOfPick}
-            onClickDay={() => setPickState(false)}
+            value={pickDate}
+            onChange={setPickDate}
+            onClickDay={() => {
+              setPickState(false);
+              dateCreator(pickDate, "pick");
+            }}
           />
         </CalendarWrapper>
       )}
       {returnState && (
-        <CalendarWrapper date={selectDate}>
+        <CalendarWrapper>
           <Calendar
-            value={dateOfReturn}
-            onChange={setDateOfReturn}
-            onClickDay={() => setReturnState(false)}
+            value={returnDate}
+            onChange={setReturnDate}
+            onClickDay={() => {
+              setReturnState(false);
+              dateCreator(returnDate, "return");
+            }}
           />
         </CalendarWrapper>
       )}
