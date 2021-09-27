@@ -56,7 +56,7 @@ const TopService: FC = () => {
           <Slider {...settings.xxxl}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
-                return <Cards data={card} />;
+                return <Cards data={card} key={card.id} />;
               })}
           </Slider>
         </MediaQuery>
@@ -64,7 +64,7 @@ const TopService: FC = () => {
           <Slider {...settings.xxl}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
-                return <Cards data={card} />;
+                return <Cards data={card} key={card.id} />;
               })}
           </Slider>
         </MediaQuery>
@@ -72,7 +72,7 @@ const TopService: FC = () => {
           <Slider {...settings.xl}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
-                return <Cards data={card} />;
+                return <Cards data={card} key={card.id} />;
               })}
           </Slider>
         </MediaQuery>
@@ -80,7 +80,7 @@ const TopService: FC = () => {
           <Slider {...settings.lg}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
-                return <Cards data={card} />;
+                return <Cards data={card} key={card.id} />;
               })}
           </Slider>
         </MediaQuery>
@@ -88,7 +88,7 @@ const TopService: FC = () => {
           <Slider {...settings.md}>
             {cardsInfo &&
               cardsInfo.map((card: IData) => {
-                return <Cards data={card} />;
+                return <Cards data={card} key={card.id} />;
               })}
           </Slider>
         </MediaQuery>
